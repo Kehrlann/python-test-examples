@@ -1,5 +1,4 @@
 from tempfile import TemporaryDirectory
-from lib.database import Database
 from lib.report import generate_report
 from os import path
 from pathlib import Path
