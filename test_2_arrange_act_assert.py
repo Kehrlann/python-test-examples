@@ -1,4 +1,4 @@
-from lib.company import Company, Employee
+from examples.company import Company, Employee
 from datetime import date
 
 

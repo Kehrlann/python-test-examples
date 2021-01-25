@@ -1,4 +1,4 @@
-from lib.database import Database
+from examples.database import Database
 from datetime import datetime
 
 
