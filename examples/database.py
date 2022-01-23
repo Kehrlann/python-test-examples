@@ -1,5 +1,8 @@
+from time import sleep
+
 class Database:
     def __init__(self):
+        sleep(2)
         self.stuff = {}
 
     def cleanup(self):
@@ -13,6 +16,9 @@ class Database:
 
     def find_all(self, id):
         return [self.stuff[id]]
+
+    def remove(self, id):
+        self.stuff.pop(id, None)
 
     def count(self):
         return len(self.stuff)

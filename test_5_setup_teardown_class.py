@@ -15,9 +15,19 @@ class TestSetupClass():
     def setup_class(cls):
         cls.db = Database()
 
+    def setup_method(self):
+        self.db.cleanup()
+
     @classmethod
     def teardown_class(cls):
         cls.db.cleanup()
+
+    def test_save_one_record(self):
+        ts = datetime.now()
+        self.db.save('1X00021', ts,  5)
+
+        assert self.db.count() == 1
+        assert self.db.find_all("1X00021") == [{"timestamp": ts, "count": 5}]
 
     def test_save_multiple_records(self):
         self.db.save('1XB2344', datetime.now(),  5)
