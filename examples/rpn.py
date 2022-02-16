@@ -27,5 +27,7 @@ def compute(expression: str = None) -> int:
 
     if len(stack) == 0:
         return 0
+    elif len(stack) != 1:
+        raise Exception(f"stack has more than one element left: {len(stack)} elements")
     else:
         return int(stack.pop())
