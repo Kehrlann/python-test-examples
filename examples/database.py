@@ -2,7 +2,7 @@ from time import sleep
 
 class Database:
     def __init__(self):
-        sleep(2)
+        sleep(0)
         self.stuff = {}
 
     def cleanup(self):
